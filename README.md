@@ -118,7 +118,7 @@ Tvým cílem je vytvořit jednoduchý ovládací panel, u kterého budeme předs
 
 	![komponenta Blinds](ukazka-blinds.png)
 
-	V komponentě si vytvoř stavovou proměnnou pro stav žaluzií a jako výchozí hodnotu do ní předej hodnotu prop `stae`.
+	V komponentě si vytvoř stavovou proměnnou pro stav žaluzií a jako výchozí hodnotu do ní předej hodnotu prop `state`.
 
 	V komponentě jsou dvě tlačítka pro zavření o otevření žaluzií. Přidej na obě událost `onClick` a do komponenty dopiš funkce, které podle stisknutého tlačítka nastaví hodnotu stavové proměnné na `'open'` nebo `'closed'`.
 
