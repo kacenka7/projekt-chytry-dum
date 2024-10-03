@@ -1,13 +1,7 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './style.css';
-
-const App = () => (
-  <>
-
-  </>
-);
+import { HomePage } from './pages/HomePage';
+import './global.css';
 
 createRoot(
   document.querySelector('#app'),
-).render(<App />);
+).render(<HomePage />);
