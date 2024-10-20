@@ -67,8 +67,7 @@ Tvým cílem je vytvořit jednoduchý ovládací panel, u kterého budeme předs
 
 	V komponentě `Dashboard` bude následující HTML:
 	```jsx
-	<main class="dashboard">
-	</main>
+	 
 	```
 
 	Jednotlivé části ovládacího panelu budou opět samostatné komponenty, které budeš vkládat do této značky `Main`.

@@ -3,18 +3,29 @@ import otevreno from "./img/blinds-open.svg"
 
 import "./zaluzie.css"
 
-export const Zaluzie = ()=>{
+import { useState } from "react"
+
+export const Zaluzie = ({state})=>{
+
+  console.log(state)
+
+  const [open, setOpen] = useState(state)
+  
+  const handleClick = ()=>{
+    setOpen(open==="open"?"close":"open")
+  }
+
     return(
-        <div class="blinds">
-            <div class="blinds__icon">
-              <img src={otevreno}/>
+        <div className="blinds">
+            <div className="blinds__icon">
+              <img src={open==="open"?otevreno:zavreno}/>
             </div>
-            <div class="blinds__name">
+            <div className="blinds__name">
               Žaluzie
             </div>
-            <div class="blinds__controls">
-              <button class="button button--active">Otevřeno</button>
-              <button class="button">Zavřeno</button>
+            <div className="blinds__controls">
+              <button onClick={handleClick} className={open==="open"?"button button--active":"button"}>Otevřeno</button>
+              <button onClick={handleClick} className={open==="open"?"button":"button button--active"}>Zavřeno</button>
             </div>
           </div>
     )

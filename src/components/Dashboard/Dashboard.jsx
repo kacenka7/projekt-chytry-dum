@@ -3,16 +3,16 @@ import { Teplomer } from '../../components/teplomer/teplomer';
 import { Zaluzie } from '../../components/zaluzie/zaluzie';
 import { Energie } from '../../components/energie/energie';
 
-import {smartHomeData} from "../../smartHomeData.js"
+import {smartHomeData} from "../../smartHomeData.js";
 
 
-export const Dashboard = ({data})=>{
+export const Dashboard = ()=>{
     return(
-        <main class="dashboard">
-          <Svetla/>
-          <Teplomer/>
-          <Zaluzie/>
-          <Energie/>
+        <main className="dashboard">
+          <Svetla lights={smartHomeData.lights} />
+          <Teplomer temperature={smartHomeData.climate.temperature}/>
+          <Zaluzie state={smartHomeData.blinds}/>
+          <Energie electricity={smartHomeData.energyConsumption.electricity} water={smartHomeData.energyConsumption.water}/>
         </main>
     )
 } 

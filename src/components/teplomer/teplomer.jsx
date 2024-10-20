@@ -2,20 +2,34 @@ import teplomer from "./img/temp.svg"
 
 import "./teplomer.css"
 
+import { useState } from "react"
 
-export const Teplomer = ()=>{
+
+export const Teplomer = ({temperature})=>{
+  //Mám tu funkci dáte sem, nebo jí mám dát mimo komponentu?
+
+  const [temp, setTemp] = useState(temperature)
+
+  const handleIncrease=()=>{
+    setTemp(temp+1)
+  }
+
+  const handleDecrease=()=>{
+    setTemp(temp-1)
+  }
+
     return(
-        <div class="climate">
-            <div class="climate__icon">
+        <div className="climate">
+            <div className="climate__icon">
               <img src={teplomer}/>
             </div>
-            <div class="climate__content">
-              <div class="climate__temperature">24&deg;C</div>
-              <div class="climate__humidity">Vlhost vzduchu 51&nbsp;%</div>
+            <div className="climate__content">
+              <div className="climate__temperature">{temp}&deg;C</div>
+              <div className="climate__humidity">Vlhost vzduchu 75&nbsp;%</div>
             </div>
-            <div class="climate__controls">
-              <button class="button">+</button>
-              <button class="button">-</button>
+            <div className="climate__controls">
+              <button onClick={handleIncrease}className="button">+</button>
+              <button onClick={handleDecrease}className="button">-</button>
             </div>
           </div>
     )

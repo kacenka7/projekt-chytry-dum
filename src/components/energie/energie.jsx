@@ -3,7 +3,7 @@ import voda  from "./img/water.svg"
 
 import "./energie.css"
 
-export const Energie = ()=>{
+export const Energie = ({electricity, water})=>{
     return(
 
         <div class="energy">
@@ -13,7 +13,7 @@ export const Energie = ()=>{
               </div>
               <div class="energy__consumption">
                 <div class="energy__description">Elektřina</div>
-                <div class="energy__value">36.7 kW</div>
+                <div class="energy__value">{electricity} kW</div>
               </div>
             </div>
             <div class="energy__source">
@@ -22,7 +22,7 @@ export const Energie = ()=>{
               </div>
               <div class="energy__consumption">
                 <div class="energy__description">Voda</div>
-                <div class="energy__value">14.1 m<sup>3</sup></div>
+                <div class="energy__value">{water} m<sup>3</sup></div>
               </div>
             </div>
           </div>
